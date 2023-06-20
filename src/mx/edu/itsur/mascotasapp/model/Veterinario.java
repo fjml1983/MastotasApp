@@ -1,4 +1,4 @@
-package mascotasapp;
+package mx.edu.itsur.mascotasapp.model;
 
 public class Veterinario {
 
@@ -10,10 +10,16 @@ public class Veterinario {
     //Comportamiento
     public void vacunar(Perro dog) {
         System.out.println(this.nombre + "esta vacunando al perro:" + dog.nombre);
-        dog.ladrar();
+        dog.ladrar(TipoDeLadrido.agudo);
         System.out.println("Termino la vacunacion");
     }
 
+    /**
+     * Permitira que el {@linkplain Veterinario} actual aplique una 
+     * vacuna a la {@linkplain Mascota} que se recibe como argumento
+     * en este caso la mascota debe ser un gato.
+     * @param cat La mascota de tipo {@linkplain Gato} a vacunar
+     */
     public void vacunar(Gato cat) {
         System.out.println("Vacunando al gato:" + cat.nombre);
         cat.maullar();
@@ -26,6 +32,7 @@ public class Veterinario {
     public void diagnosticar(Mascota pet) {
         System.out.println("Diagnosticando a la mascota:" + pet.nombre);
         //grado es un valor del 0 al 10 donde 10 es lleno y 0 es vacio.
+        
         double grado = pet.getGradoDeSaturacionDelEstomago();
         System.out.print("-> Diagnostico: ");
         if (grado >= 10) {
@@ -35,7 +42,7 @@ public class Veterinario {
         } else {
             System.out.println("La mascota esta sana");
         }
-
+        
     }
 
 }
