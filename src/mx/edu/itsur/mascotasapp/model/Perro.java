@@ -52,7 +52,7 @@ public class Perro extends Mascota {
     }
     
     public void ladrar(){
-        System.out.println("Guaw Guaw");
+        System.out.println(this.nombre +  ": Guaw Guaw");
     }
 
     public void ladrar(String textoALadrar){
@@ -84,6 +84,6 @@ public class Perro extends Mascota {
     @Override
     public void jugar()
     {
-        System.out.println(this.nombre+" jugando con un hueso");
+        System.out.println(this.nombre + " jugando con un hueso");
     }
 }

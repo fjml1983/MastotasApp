@@ -33,6 +33,14 @@ public class Veterinario {
         System.out.println("Diagnosticando a la mascota:" + pet.nombre);
         //grado es un valor del 0 al 10 donde 10 es lleno y 0 es vacio.
         
+        if(pet instanceof Gato){
+            Gato g = (Gato) pet;
+            g.maullar();
+        }else if(pet instanceof Perro){
+            Perro p = (Perro) pet;
+            p.ladrar();
+        }
+        
         double grado = pet.getGradoDeSaturacionDelEstomago();
         System.out.print("-> Diagnostico: ");
         if (grado >= 10) {
