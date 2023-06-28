@@ -12,4 +12,12 @@ public class Cotorro extends Mascota {
     public Cotorro(){
         super("", "", "", 0, "", null);
     }
+    @Override
+    public void comer(String alimento){
+        System.out.println("Cotorro comiendo");
+    }
+    @Override
+    public void jugar(){
+        System.out.println("Cotorrito jugando");
+    }
 }

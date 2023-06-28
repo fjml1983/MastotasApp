@@ -10,9 +10,11 @@ public class MascotasApp {
     public static void main(String[] args) {
 
         //Ejemplos de métodos estáticos
-        //GUIConsola.imprimirMenu(); 
-        //GUIConsola.imprimirPerroLadrando();
-        //GUIConsola.imprimirGatoMaullando();
+        GUIConsola.imprimirMenu(); 
+        GUIConsola.imprimirPerroLadrando();
+        GUIConsola.imprimirGatoMaullando();
+        
+        
         
         //Creación de instancias de diversas mascotas con diferentes constructores.
         Perro p1 = new Perro("FIDO", "Chihuahua");

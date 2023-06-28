@@ -26,7 +26,10 @@ public class Gato extends Mascota {
     public void jugar() {
         System.out.println(this.nombre + ": Jugando con bola de estambre JIJIJIJAJAJA");    
     }
-    
+    @Override
+    public void comer(String alimento){
+        System.out.println("Gato comiendo");
+    }
     
     
 }

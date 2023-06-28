@@ -3,7 +3,7 @@ package mx.edu.itsur.mascotasapp.model;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Mascota {
+public abstract class Mascota {
 
     //Atributos de la clase
     protected String nombre;
@@ -15,7 +15,8 @@ public class Mascota {
     private int vecesQueHaComido = 0;
     private boolean vivo = true;
 
-    public Mascota(String nombre, String raza, String color, double peso, String tamanio, LocalDate fechaDeNacimiento) {
+    public Mascota(String nombre, String raza, String color, 
+                   double peso, String tamanio, LocalDate fechaDeNacimiento) {
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;
@@ -54,7 +55,8 @@ public class Mascota {
     }
 
     //Metodos de la clase
-    public void comer(String alimento) {
+    public abstract void comer(String alimento); 
+    /*{
         if (this.vivo == true) {
             System.out.println("La mascota " + this.nombre
                     + " esta comiendo: " + alimento);
@@ -67,7 +69,7 @@ public class Mascota {
             System.out.println("La mascota " + this.nombre
                     + " esta muerta, no puede comer");
         }
-    }
+    }*/
 
     /**
      * Ponoe a dormir a la mascota
@@ -80,8 +82,6 @@ public class Mascota {
     /**
      * Pone a jugar a la mascota
      */
-    public void jugar() {
-        System.out.println(this.nombre + ": JIJIJI JA");
-    }
+    public abstract void jugar() ;
 
 }

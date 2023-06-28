@@ -9,10 +9,9 @@ enum TipoDeLadrido {
 }
 
 public class Perro extends Mascota {
-
     //Atributos de la clase
     protected int pulgas;
-
+   
     //Constructor predeterminado (invisible por default)
     //Constructor personalizado
     public Perro(String name, String raza) {
@@ -85,5 +84,9 @@ public class Perro extends Mascota {
     public void jugar()
     {
         System.out.println(this.nombre + " jugando con un hueso");
+    }
+    @Override
+    public void comer(String alimento){
+        System.out.println("Perro comiendo");
     }
 }
